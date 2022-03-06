@@ -126,7 +126,7 @@ h1 {
     }
 
     .cards {
-        padding: 0;
+        padding: 50px 0;
         gap: 10px;
     }
 }
