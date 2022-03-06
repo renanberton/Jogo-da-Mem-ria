@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background-color: #DBD8E3;
+    padding-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #3c3c3c;
+    padding-bottom: 50px;
+}
+
+.box {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    height: auto;
+    background-color: #385BA8;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.insideCards {
+    display: flex;
+    flex: 1 0 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+    margin: 0 auto;
+    max-height: 150px;
+    border-radius: 10px;
+    max-width: 100px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.insideCards img {
+    height: 150px;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.logo img {
+    height: 150px;
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+
+.bulba {
+    content: url('../imgs/bulbasaur.png');
+}
+
+.charmander {
+    content: url('../imgs/charmander.png');
+}
+
+.pikachu {
+    content: url('../imgs/pikachu.png');
+}
+
+.onix {
+    content: url('../imgs/onix.png');
+}
+
+.snorlax {
+    content: url('../imgs/snorlax.png');
+}
+
+.squirtle {
+    content: url('../imgs/squirtle.png');
+}
+
+.zapdos {
+    content: url('../imgs/zapdos.png');
+}
+
+.gengar {
+    content: url('../imgs/gengar.png');
+}
