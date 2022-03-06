@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -97,4 +98,32 @@ h1 {
 
 .gengar {
     content: url('../imgs/gengar.png');
+}
+
+@media (max-width: 767px) {
+    .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .box {
+        width: 60%;
+        padding: 50px;
+    }
+
+    .insideCards {
+        max-width: 70px;
+        max-height: 70px;
+        padding: 5px;
+        gap: 0;
+    }
+
+    .insideCards img {
+        height: 60px;
+        width: auto;
+    }
+
+    .cards {
+        gap: 20px;
+    }
 }
