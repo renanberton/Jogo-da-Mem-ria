@@ -153,9 +153,9 @@ gengarCard.addEventListener('click', (e) => {
 })
 
 gengarCard1.addEventListener('click', (e) => {
-    if(gengarCard1.classList.contains('gengar') && gengarCard1.classList.contains('gengar')) {
+    if(gengarCard1.classList.contains('gengar') && gengarCard.classList.contains('gengar')) {
         gengarCard1.classList.add('gengar');
-        gengarCard1.classList.add('gengar');
+        gengarCard.classList.add('gengar');
     } else {
         gengarCard1.classList.toggle('gengar');  
     }})
