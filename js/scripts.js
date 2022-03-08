@@ -1,7 +1,11 @@
+/* Seletor da div e img */
 let pokemons = document.querySelectorAll('.insideCards > img');
+
+/* Array que armazenará a posição dos 2 pokémons clicados 
+Contador para limitar o número de cliques
+*/
 let arrayPokemon = [ ];
 let contador = 0;
-
 
 pokemons.forEach((card) => {    
     card.addEventListener('click', () => {
@@ -10,23 +14,26 @@ pokemons.forEach((card) => {
         arrayPokemon.push(card);
         let pokemon1 = arrayPokemon[0];
         let pokemon2 = arrayPokemon[1];
-        pokemon1.setAttribute('src', 'imgs/' + pokemon1.id.toString() + '.png');
         if(contador <3) {
-            card.getAttribute('src');
-            card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
-            if(pokemon1.id === pokemon2.id) {
-                contador = 0;
-                pokemon1.setAttribute('src', 'imgs/' + pokemon1.id.toString() + '.png');
-                pokemon2.setAttribute('src', 'imgs/' + pokemon2.id.toString() + '.png');
-                arrayPokemon = [ ];
-            } else {
-                contador = 0;
-                arrayPokemon = [ ];
-                setTimeout(() => {
-                    pokemon1.setAttribute('src', 'imgs/pokebola-logo.png');
-                    pokemon2.setAttribute('src', 'imgs/pokebola-logo.png');
-                }, 1000);
-            }
+            pokemon1.setAttribute('src', 'imgs/' + pokemon1.id.toString() + '.png');
+            pokemon2.setAttribute('src', 'imgs/' + pokemon2.id.toString() + '.png');
+            setTimeout( () => {
+                card.getAttribute('src');
+                card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
+                if(pokemon1.id === pokemon2.id) {
+                    contador = 0;
+                    pokemon1.setAttribute('src', 'imgs/' + pokemon1.id.toString() + '.png');
+                    pokemon2.setAttribute('src', 'imgs/' + pokemon2.id.toString() + '.png');
+                    arrayPokemon = [ ];
+                } else {
+                    contador = 0;
+                    arrayPokemon = [ ];
+                    setTimeout(() => {
+                        pokemon1.setAttribute('src', 'imgs/pokebola-logo.png');
+                        pokemon2.setAttribute('src', 'imgs/pokebola-logo.png');
+                    }, 500);
+                }
+            }, 1500)
         } 
     })
 })
