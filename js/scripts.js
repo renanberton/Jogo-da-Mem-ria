@@ -3,6 +3,20 @@ let pokemons = document.querySelectorAll('.insideCards > img');
 let elementos = document.querySelectorAll('.insideCards');
 let botao = document.getElementById('btn');
 
+let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar'];
+
+
+window.addEventListener('load', () => {
+    array = array.sort((a) => Math.random() - 0.7);
+    let cont = 0;
+    pokemons.forEach((e) => {
+            e.setAttribute('id', (pokemons.forEach((card) => {
+            card.setAttribute('id', array[cont].toString());
+            cont = cont + 1;
+        })));
+    })
+})
+
 /* Array que armazenará a posição dos 2 pokémons clicados 
 Contador para limitar o número de cliques
 */
@@ -10,6 +24,8 @@ let arrayPokemon = [ ];
 let contador = 0;
 
 /* Implantar função nivel de dificuldade */
+
+
 
 botao.addEventListener('click', () => {
     pokemons.forEach((card) => {
@@ -26,8 +42,9 @@ botao.addEventListener('click', () => {
     }, 5000);
 })
 
+
 pokemons.forEach((card) => {    
-    card.addEventListener('click', () => {
+    card.addEventListener('click', () => {        
         contador += 1;
         card.getAttribute('id');
         arrayPokemon.push(card);
