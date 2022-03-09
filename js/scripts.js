@@ -1,11 +1,30 @@
 /* Seletor da div e img */
 let pokemons = document.querySelectorAll('.insideCards > img');
+let elementos = document.querySelectorAll('.insideCards');
+let botao = document.getElementById('btn');
 
 /* Array que armazenará a posição dos 2 pokémons clicados 
 Contador para limitar o número de cliques
 */
 let arrayPokemon = [ ];
 let contador = 0;
+
+/* Implantar função nivel de dificuldade */
+
+botao.addEventListener('click', () => {
+    pokemons.forEach((card) => {
+        card.getAttribute('src');
+        card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
+        setTimeout(() => {
+            card.setAttribute('src', 'imgs/pokebola-logo.png');                    
+        },2000);
+    })
+    botao.style = "display: none;";
+    setTimeout(() => {
+    botao.innerHTML = "RECOMEÇAR";
+    botao.style = "display: flex;";
+    }, 5000);
+})
 
 pokemons.forEach((card) => {    
     card.addEventListener('click', () => {
