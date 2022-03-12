@@ -3,9 +3,10 @@ let pokemons = document.querySelectorAll('.insideCards > img');
 let elementos = document.querySelectorAll('.insideCards');
 let botao = document.getElementById('btn');
 
+/* Array com os nomes dos pokemons */
 let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar'];
 
-
+/* Ao window carregar ele transforma a ordem dos pokemons em aleatoria */
 window.addEventListener('load', () => {
     array = array.sort((a) => Math.random() - 0.5);
     let cont = 0;
@@ -24,8 +25,7 @@ let contador = 0;
 
 /* Implantar função nivel de dificuldade */
 
-
-
+/* Botão que mostra os pokemons e depois esconde os mesmos */
 botao.addEventListener('click', () => {    
     pokemons.forEach((card) => {
         card.getAttribute('src');
@@ -41,7 +41,7 @@ botao.addEventListener('click', () => {
     }, 5000);
 })
 
-
+/* Função que vira as cartas */
 pokemons.forEach((card) => {    
     card.addEventListener('click', () => {        
         contador += 1;
