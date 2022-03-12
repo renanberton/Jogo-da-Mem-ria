@@ -27,6 +27,12 @@ let contador = 0;
 
 /* Botão que mostra os pokemons e depois esconde os mesmos */
 botao.addEventListener('click', () => {    
+    array = array.sort((a) => Math.random() - 0.5);
+    let cont = 0;
+    pokemons.forEach((card) => {
+        card.setAttribute('id', array[cont].toString());
+        cont = cont + 1;
+    })
     pokemons.forEach((card) => {
         card.getAttribute('src');
         card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
