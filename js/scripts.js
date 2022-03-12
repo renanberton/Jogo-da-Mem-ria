@@ -3,19 +3,18 @@ let pokemons = document.querySelectorAll('.insideCards > img');
 let elementos = document.querySelectorAll('.insideCards');
 let botao = document.getElementById('btn');
 
-let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar'];
+let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar'];
 
 
 window.addEventListener('load', () => {
-    array = array.sort((a) => Math.random() - 0.7);
+    array = array.sort((a) => Math.random() - 0.5);
     let cont = 0;
-    pokemons.forEach((e) => {
-            e.setAttribute('id', (pokemons.forEach((card) => {
-            card.setAttribute('id', array[cont].toString());
-            cont = cont + 1;
-        })));
+    pokemons.forEach((card) => {
+        card.setAttribute('id', array[cont].toString());
+        cont = cont + 1;
     })
-})
+    });
+
 
 /* Array que armazenará a posição dos 2 pokémons clicados 
 Contador para limitar o número de cliques
@@ -27,7 +26,7 @@ let contador = 0;
 
 
 
-botao.addEventListener('click', () => {
+botao.addEventListener('click', () => {    
     pokemons.forEach((card) => {
         card.getAttribute('src');
         card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
