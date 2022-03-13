@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -114,6 +116,13 @@ h1 {
     font-size: 20px;
     color: #fff;
     cursor: pointer;
+    transition: 1s;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 2px solid #385BA8;
+    color: #385BA8;
 }
 
 .vencedor {
@@ -129,12 +138,15 @@ h1 {
     color: #fff;
     margin-top: 25px;
     font-size: 42px;
+    font-family: 'Francois One', sans-serif;
+    letter-spacing: 1px;
 }
 
 .vencedor p {
     text-align: center;
     color: #fff;
     font-size: 20px;
+    font-family: 'Francois One', sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -171,6 +183,7 @@ h1 {
     .vencedor {
         width: 90%;
         margin-top: 100px;
+        font-family: ;
     }
 
 }
