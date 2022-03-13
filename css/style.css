@@ -116,6 +116,27 @@ h1 {
     cursor: pointer;
 }
 
+.vencedor {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #3c3c3c;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    display: none;
+}
+
+.vencedor h1 {
+    color: #fff;
+    margin-top: 25px;
+    font-size: 42px;
+}
+
+.vencedor p {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
 @media (max-width: 767px) {
     .logo img {
         width: 200px;
@@ -146,4 +167,10 @@ h1 {
         padding: 50px 0;
         gap: 10px;
     }
+
+    .vencedor {
+        width: 90%;
+        margin-top: 100px;
+    }
+
 }

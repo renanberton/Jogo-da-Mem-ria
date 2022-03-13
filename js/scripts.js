@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
     })
     });
 
-
 /* Array que armazenará a posição dos 2 pokémons clicados 
 Contador para limitar o número de cliques
 */
@@ -47,9 +46,11 @@ botao.addEventListener('click', () => {
     }, 5000);
 })
 
+var vencedor = 1;
+
 /* Função que vira as cartas */
 pokemons.forEach((card) => {    
-    card.addEventListener('click', () => {        
+    card.addEventListener('click', () => {    
         contador += 1;
         card.getAttribute('id');
         arrayPokemon.push(card);
@@ -63,8 +64,11 @@ pokemons.forEach((card) => {
                 card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
                 if(pokemon1.id === pokemon2.id) {
                     contador = 0;
+                    ++vencedor;
                     pokemon1.setAttribute('src', 'imgs/' + pokemon1.id.toString() + '.png');
                     pokemon2.setAttribute('src', 'imgs/' + pokemon2.id.toString() + '.png');
+                    pokemon1.setAttribute('class', 'jaVirou');
+                    pokemon2.setAttribute('class', 'jaVirou');
                     arrayPokemon = [ ];
                 } else {
                     contador = 0;
@@ -76,8 +80,32 @@ pokemons.forEach((card) => {
                 }
             }, 1500)
         } 
+        /* Parte que mostra o vencedor */
+        if(vencedor == 8) {
+            vencedor = 0;
+            /* Coloquei 2 segundos de settimeout em toda a função para que de tempo da pessoa ver que terminou */
+            setTimeout(() => {
+                let conteudo = document.querySelector('.box');
+                /* Criei uma div no HTML e escondi a mesma com display: none */
+                let vencedor = document.querySelector('.vencedor');
+                /* Ao vencer, o conteudo do jogo é escondido, e a div 'vencedor' é exibida */
+                conteudo.style = "display: none;";
+                vencedor.style = "display: block;";
+                /* E a div 'vencedor' append o botão de recomeçar */
+                vencedor.appendChild(botao);
+                /* E ao clicar no botão, o jogo recomeça com a mesma mecânica utilizada 
+                O conteúdo volta a aperecer, o botao volta para o conteudo, e o conteudo de vencedor é escondido novamente
+                */
+                botao.addEventListener('click', () => {
+                    let container = document.querySelector('.container');
+                    conteudo.style = "display: block;";
+                    container.appendChild(botao);
+                    vencedor.style = "display: none;";
+                })                
+            }, 2000);
+        }   
+        })
     })
-})
 
 
 // /* Seletores */
