@@ -4,7 +4,7 @@ let elementos = document.querySelectorAll('.insideCards');
 let botao = document.getElementById('btn');
 
 /* Array com os nomes dos pokemons */
-let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar'];
+let array = ['bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'bulbasaur', 'charmander', 'pikachu', 'onix', 'snorlax', 'squirtle', 'zapdos', 'gengar', 'blastoise', 'charizard', 'pidgeotto', 'alakazam', 'blastoise', 'charizard', 'pidgeotto', 'alakazam'];
 
 /* Ao window carregar ele transforma a ordem dos pokemons em aleatoria */
 window.addEventListener('load', () => {
@@ -81,7 +81,7 @@ pokemons.forEach((card) => {
             }, 1500)
         } 
         /* Parte que mostra o vencedor */
-        if(vencedor == 8) {
+        if(vencedor == 12) {
             vencedor = 0;
             /* Coloquei 2 segundos de settimeout em toda a função para que de tempo da pessoa ver que terminou */
             setTimeout(() => {
