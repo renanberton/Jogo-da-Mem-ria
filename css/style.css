@@ -24,7 +24,7 @@ h1 {
     margin: 0 auto;
     display: flex;
     height: auto;
-    background-color: #385BA8;
+    background-color: #0E3EDA;
     border-radius: 10px;
     padding: 50px;
 }
@@ -42,7 +42,7 @@ h1 {
     flex: 1 0 100px;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background-color: #cccccc;
     margin: 0 auto;
     max-height: 100px;
@@ -58,6 +58,9 @@ h1 {
     width: auto;
     max-width: 100px;
     max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
@@ -71,42 +74,10 @@ h1 {
 }
 
 
-.bulba {
-    content: url('../imgs/bulbasaur.png');
-}
-
-.charmander {
-    content: url('../imgs/charmander.png');
-}
-
-.pikachu {
-    content: url('../imgs/pikachu.png');
-}
-
-.onix {
-    content: url('../imgs/onix.png');
-}
-
-.snorlax {
-    content: url('../imgs/snorlax.png');
-}
-
-.squirtle {
-    content: url('../imgs/squirtle.png');
-}
-
-.zapdos {
-    content: url('../imgs/zapdos.png');
-}
-
-.gengar {
-    content: url('../imgs/gengar.png');
-}
-
 .btn {
     height: 70px;
     width: 200px;
-    background-color: #385BA8;
+    background-color: #0E3EDA;
     border-radius: 5px;
     border: none;
     margin: 50px auto;
@@ -118,6 +89,8 @@ h1 {
     color: #fff;
     cursor: pointer;
     transition: 1s;
+    font-family: 'Francois One', sans-serif;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
@@ -154,25 +127,25 @@ h1 {
     .logo img {
         width: 200px;
         height: auto;
-        padding: 50px 0;
+        padding: 25px 0;
     }
 
     .box {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 !important;
     }
 
     .insideCards {
-        max-width: 60px;
-        max-height: 60px;
+        max-width: 70px;
+        max-height: 70px;
         padding: 10px;
         gap: 0;
         margin: 10px 0;
     }
 
     .insideCards img {
-        height: 60px;
+        height: 70px;
         width: auto;
     }
 
