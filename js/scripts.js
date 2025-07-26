@@ -37,7 +37,7 @@ botao.addEventListener('click', () => {
         card.setAttribute('src', 'imgs/' + card.id.toString() + '.png');
         setTimeout(() => {
             card.setAttribute('src', 'imgs/pokebola-logo.png');                    
-        },2000);
+        },5000);
     })
     botao.style = "display: none;";
     setTimeout(() => {
